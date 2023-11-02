@@ -110,3 +110,16 @@ The script logs 0.
 6. Discuss the implications of running a computationally expensive task in a promise.
 
 Read more about Promises [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#common_mistakes).
+
+### Async and Await
+
+**For you to do**:
+1. The code in "asynchronous/asyncawait_timer.js" is quite hard to read. Rewrite it using async/await.
+2. Explore the difference between sequentialStart, concurrentStart, concurrentPromise, and parallel in "asynchronous/concurrency.js".
+
+
+# Further Reading:
+-	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#async_functions_and_execution_order
+-	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function
+-	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
+-	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
