@@ -1,7 +1,7 @@
 #! /opt/homebrew/bin/node
 const http = require('http')
 const args = process.argv;
-const getConfig = require('./config');
+const getConfig = require('../config');
 
 
 const config = getConfig(args);
