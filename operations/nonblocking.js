@@ -4,7 +4,7 @@ function moreWork() {
     console.log('more work');
 }
 
-fs.readFile("data/file.txt", (err, data) => {
+fs.readFile("data/test.txt", (err, data) => {
   if (err) console.log(err.message);
   else console.log(data);
 });

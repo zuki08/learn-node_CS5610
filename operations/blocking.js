@@ -5,7 +5,7 @@ function moreWork() {
 }
 
 try {
-    const data = fs.readFileSync("data/file.txt"); // blocks here until file is read
+    const data = fs.readFileSync("data/test.txt"); // blocks here until file is read
     console.log(data);
     moreWork();
 }
