@@ -1,0 +1,1 @@
+- In eventloop/poll.js, what will be the order of execution? Briefly explain the order of execution w.r.t the event loop phases.
