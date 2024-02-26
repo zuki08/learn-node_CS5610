@@ -1,1 +1,9 @@
 - In eventloop/poll.js, what will be the order of execution? Briefly explain the order of execution w.r.t the event loop phases.
+
+Output: 
+
+foo
+done
+Read Error
+
+This is the same case as the timer case. Although there isn't a timeout, there is an async operation, such that the callback is after the async read is pushed to the pending callbacks that retrieve. In this case the reading happens alongside the main thread, then callback is pushed when I/O is complete, which gets called from pending after main thread finishes.

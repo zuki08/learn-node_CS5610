@@ -1,1 +1,12 @@
 - In eventloop/timer.js, what will be the order of execution? Briefly explain the order of execution w.r.t the event loop phases.
+
+The order of execution in eventloop/timer.js should be: 
+
+foo
+baz
+foo
+baz
+2 : bar
+1 : bar
+
+Despite the setTimeout having a value of 0, the call stack moves it to the Web API. From there, it gets thrown into the task queue while the other foo and baz get executed. So when the main thread is empty, the main thread goes to the callback and thats when the eventloop starts to execute. And it executes in same order that the pending callbacks are queued.

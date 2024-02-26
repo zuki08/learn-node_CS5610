@@ -1,2 +1,9 @@
 - Explain the order of execution in terms of the event loop for eventloop/immediate.js.
+
+Matches our understanding of the loop. File I/O in the polling phase. Where data is logged to the console. Then We have a timeout and its callback and a setImmediate callback. 
+
+Polling --> (no callback) Pending --> Adds timeout and immediate. --> check --> timer --> Pending (in order)
+
 - Will the order of execution change if timeout is changed to 0? Why or why not?
+
+It will not, as setImmediate is checked and moved to the queue before timers.

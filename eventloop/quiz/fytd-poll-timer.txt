@@ -1,3 +1,11 @@
 - Explain the order of execution in terms of the event loop for eventloop/poll_timer.js.
+
+So setTimeout is queued up in the timer section. then we have a file I/O that is working. So poll takes precedence and the corresponding callback will be queued and executed. And the pending callback from timers is executed.
+
 - Will the order of execution change if the delay in the while loop is changed from 10s to 150s? Why or why not?
+
+It could, because depending on the order of pending callbacks, the order of the callback execution may differ. So if the timeout happens before I/O finishes and queues, the timeout runs first, followed by the I/O callback.
+
 - Will the order of execution change if timeout is changed to 0? Why or why not?
+
+It could, because depending on the order of pending callbacks, the order of the callback execution may differ. So if the timeout happens before I/O finishes and queues, the timeout runs first, followed by the I/O callback.
